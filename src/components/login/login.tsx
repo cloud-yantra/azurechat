@@ -26,6 +26,7 @@ export const LogIn = () => {
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
+        <Button onClick={() => signIn("google")}>Google</Button>
         <Button onClick={() => signIn("github")}>GitHub</Button>
         <Button onClick={() => signIn("azure-ad")}> Microsoft 365</Button>
         {process.env.NODE_ENV === "development" && (

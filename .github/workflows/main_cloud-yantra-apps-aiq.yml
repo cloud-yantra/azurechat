@@ -92,10 +92,14 @@ jobs:
             az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=${{ vars.AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME }}  -o none
             az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings AZURE_OPENAI_API_INSTANCE_NAME=${{ vars.AZURE_OPENAI_API_INSTANCE_NAME }}  -o none
             az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings AZURE_OPENAI_API_VERSION=${{ vars.AZURE_OPENAI_API_VERSION }}  -o none
+            az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings GOOGLE_CLIENT_ID=${{ vars.GOOGLE_CLIENT_ID }}  -o none
             az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings NEXTAUTH_URL=${{ vars.NEXTAUTH_URL }}  -o none
+            az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings NEXT_TELEMETRY_DISABLED=${{ vars.NEXT_TELEMETRY_DISABLED }}  -o none
+            az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings USERS_EMAIL_ADDRESS=${{ vars.USERS_EMAIL_ADDRESS }}  -o none
             
             az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings AZURE_AD_CLIENT_SECRET=${{ secrets.AZURE_AD_CLIENT_SECRET }}  -o none
             az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings AZURE_COSMOSDB_KEY=${{ secrets.AZURE_COSMOSDB_KEY }}  -o none
+            az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}  -o none
             az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}  -o none
             az webapp config appsettings set -n ${{ secrets.AZURE_APP_SERVICE_NAME }} -g $rg --settings OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}  -o none
             
